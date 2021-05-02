@@ -2,17 +2,6 @@
 #### Download YouTube Videos for Free!
 
 ## [+] Installation & Usage
-```
-apt update
-apt install git -y
-git clone https://github.com/CyberTitus/Termux-UI.git
-cd Termux-UI
-chmod +x *
-bash main.sh
-exit
-```
-### or use Single Command
-```
-apt update && apt install git -y && git clone https://github.com/CyberTitus/Termux-UI.git && cd Termux-UI && chmod +x * && bash main.sh
-```
+##### Use The Commands in instll-[terminal].sh
+
 ## Website: CyberTitus.github.io
