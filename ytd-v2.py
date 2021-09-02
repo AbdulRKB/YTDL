@@ -30,7 +30,7 @@ def downloadLink(link):
 	return j[1]
 
 
-link = downloadLink('https://www.youtube.com/watch?v=LXb3EKWsInQ')
+link = downloadLink(str(input('Enter Video Link: ')))
 
 
 
