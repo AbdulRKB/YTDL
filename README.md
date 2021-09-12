@@ -12,6 +12,6 @@ git clone https://github.com/CyberTitus/YTD
 cd YTD
 ```
 ```bash
-bash install
+bash install-tmux.sh
 ```
 ## Website: CyberTitus.github.io
