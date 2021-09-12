@@ -6,7 +6,12 @@
 
 # Commands:
 ```bash
-pkg install bash
+git clone https://github.com/CyberTitus/YTD
 ```
-
+```bash
+cd YTD
+```
+```bash
+bash install
+```
 ## Website: CyberTitus.github.io
