@@ -14,4 +14,3 @@ cd YTD
 ```bash
 bash install-tmux.sh
 ```
-## Website: CyberTitus.github.io
