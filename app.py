@@ -38,6 +38,3 @@ def index_post():
 	videoLink = request.form.get("videoId")
 	vidDwnLink = getDownloadLink(videoLink)
 	return redirect(vidDwnLink)
-
-if __name__ == '__main__':
-	app.run()
