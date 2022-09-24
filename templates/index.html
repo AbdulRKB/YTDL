@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YT Save</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<form action="" class="main" autocomplete="off" method="POST">
+			<img src="{{ url_for('static', filename='icon.webp') }}" width="150">
+			<h2 class="title">YT Save</h2>
+			<div class="input-group">
+				<input type="url" id="videoURL" name="videoId" class="iput" required minlength="20">
+				<label for="videoURL" class="label">Enter Video Link</label>
+			</div>
+			<button type="submit" class="main-btn" id="dwnBtn">Download</button>
+		</form>
+	</div>
+</body>
+</html>
