@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect
 import requests
 app = Flask(__name__)
 
@@ -35,6 +35,6 @@ def index():
 
 @app.post("/")
 def index_post():
-	videoLink = request.form.get("videoId")
+	videoLink = request.form.get("videoLink")
 	vidDwnLink = getDownloadLink(videoLink)
 	return redirect(vidDwnLink)
