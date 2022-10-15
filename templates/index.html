@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>YTDL</title>
-	<style type="text/css">
-	body{margin: 0;font: 18px/1.5 Helvetica, sans-serif;background: #111;color: #fff;}.container{width: 90%;margin: 0 auto;}.container > form{display: flex;align-items: center;justify-content: center;height: 100vh;}.input-group{position: relative;}#videoLink, .btn{outline: 0;background: transparent;border: 2.3px solid #dfe6e9;border-radius: 4px;padding: 6px;color: #fff;}label[for="videoLink"]{font-size: small;position: absolute;left: 10px;top: -9px;background: #111;}.form-area{display: flex;flex-direction: column;gap: 5px;}#videoLink{width: 350px;height: 25px;}.btn{padding: 10px 140px;font-weight: 600;text-transform: uppercase;transition: 500ms ease-in-out;}.btn:hover{background: #dfe6e9;color: #111;}
-	</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTDL</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #111;
+            font: 1.3em/1.3 monospace;
+            color: #9ccc9c;
+        }
+        .container{
+            height: 100vh;
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .videoLink{
+            background-color: transparent;
+            outline: 0;
+            border: 2px solid #649568;
+            border-radius: 6px;
+            color: #9ccc9c;
+            font-size: medium;
+            padding: 1em;
+            width: 90%;
+        }
+        .inputspace{
+            width: 100%;
+            position: relative;
+        }
+        .label{
+            position: absolute;
+            font-size: medium;
+            left: 8px;
+            top: -7px;
+            background-color: #111;
+            padding: 0 5px;
+            font-weight: 600;
+        }
+        .d-btn{
+            outline: 0;
+            background-color: transparent;
+            border: 2px solid #2b5329;
+            border-radius: 6px;
+            color: #9ccc9c;
+            margin: .4em;
+            padding: .6em;
+            font-size: medium;
+            font-weight: 600;
+            transition: 250ms ease-in;
+        }
+        .d-btn:hover{
+            background-color: #2b5329;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<form class="form-area" action="/" method="post">
-			<div class="input-group">
-				<input type="url" name="videoLink" id="videoLink" required minlength="12">
-				<label for="videoLink">Enter Video Link</label>
-			</div>
-			<button type="submit" class="btn">Download</button>
-		</form>
-	</div>
+    <form action="/" method="post" class="container">
+        <div class="inputspace">
+            <input type="url" name="videoLink" class="videoLink" id="videoLink">
+            <label for="videoLink" class="label">Enter Video Link</label>
+        </div>
+        <button type="submit" class="d-btn">Download</button>
+    </form>
 </body>
 </html>
