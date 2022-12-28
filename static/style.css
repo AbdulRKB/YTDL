@@ -1,0 +1,56 @@
+:root{
+    --mainBgColor: #0b132b;
+    --formBgColor: #1c2541;
+    --textColor: #f4f4f9;
+    --secondaryTextColor: #11151c;
+    --placeholderColor: #d6d5c9;
+}
+
+body{
+    background-color: var(--mainBgColor);
+    color: var(--textColor);
+    margin: 0;
+    font: 1.4em/1.5 Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ctr{
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5em;
+    padding: 1em;
+    background-color: var(--formBgColor);
+    border-top-left-radius: 3em;
+    border-top-right-radius: 3em;
+    border: 1px solid var(--textColor);
+    border-top: 0;
+}
+
+#videoLink, #downloadBtn{
+    padding: 1em;
+    outline: 0;
+    background-color: transparent;
+    border: 2px solid var(--textColor);
+    color: var(--textColor);
+    border-radius: 3px;
+    font-weight: 600;
+    transition: 300ms ease-in;
+}
+
+#downloadBtn:hover{
+    background-color: var(--textColor);
+    color: var(--secondaryTextColor);
+}
+
+#videoLink::placeholder{
+    color: var(--placeholderColor);
+}
