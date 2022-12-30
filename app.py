@@ -1,23 +1,22 @@
-from flask import Flask, render_template, url_for, request, redirect
+from flask import Flask, render_template, request
 from pytube import YouTube
 
-app = Flask(__name__)
+app=Flask(__name__)
 
-def ytLink(videoLink):
-	yt = YouTube(videoLink)
-	video_stream = yt.streams.filter(resolution='720p').first()
-	return video_stream.url
+def getDwLinks(vid):
+    video = YouTube(vid).streams
+    return [[video.get_highest_resolution(), video.get_lowest_resolution()], [video.get_audio_only(subtype="mp4")]]
 
 
 @app.get('/')
-def index():
-	return render_template("index.html")
+def homeView():
+    return render_template('index.html')
 
 @app.post('/')
-def index_post():
-	videoURL = request.form.get('videoLink')
-	downloadLink = ytLink(videoURL)
-	return redirect(downloadLink)
+def downloadView():
+    videoLink = request.form.get('videoLink')
+    links = getDwLinks(videoLink)
+    return render_template('download.html', links=links)
 
 if __name__ == '__main__':
-	app.run()
+    app.run()

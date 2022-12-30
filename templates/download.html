@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTx</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container centre">
+        <div class="inputArea">
+            <h2 id="title" class="sm">SELECT QUALITY</h2>
+            {% for link in links[0] %}
+            <a href="{{link.url}}" class="btnStyle" style="text-transform:uppercase;">VIDEO ({{link.resolution}})</a>
+            {% endfor %}
+            {% for link in links[1] %}
+            <a href="{{link.url}}" class="btnStyle" style="text-transform:uppercase;">AUDIO ({{link.abr}})</a>
+            {% endfor %}
+        </div>
+        <span id="info">Made in <span id="name">Python</span></span>
+    </div>
+</body>
+</html>

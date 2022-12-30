@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVE YT</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>YTx</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <form action="#" method="post" class="container ctr" autocomplete="off">
-        <h2>SAVE YT</h2>
-        <input type="text" name="videoLink" id="videoLink" class="input" placeholder="Enter Your link..." required>
-        <input type="submit" id="downloadBtn" value="DOWNLOAD">
-    </form>
+    <div class="container centre">
+        <form action="/" method="post" class="inputArea" autocomplete="off">
+            <h2 id="title">YTx</h2>
+            <input type="url" name="videoLink" class="btnStyle" placeholder="Enter Your Link..." required minlength="20">
+            <button class="btnStyle">DOWNLOAD</button>
+        </form>
+        <span id="info">Made in <span id="name">Python</span></span>
+    </div>
 </body>
 </html>
